@@ -8,11 +8,11 @@ on:
   workflow_dispatch:
 
 env:
-  PROJECT_ID: estateiqclone
+  PROJECT_ID: estateiq-451700
   REGION: us-central1
   ARTIFACT_REGISTRY: estateiq-models
   MODEL_PATH: models/estate_price_prediction
-  SA_EMAIL: self-522@estateiqclone.iam.gserviceaccount.com
+  SA_EMAIL: estateiq@estateiq-451700.iam.gserviceaccount.com
   SERVICE_NAME: estateiq-prediction
 
 jobs:
@@ -48,8 +48,8 @@ jobs:
     - name: Deploy to Cloud Run
       env:
         GOOGLE_CLOUD_PROJECT: ${{ env.PROJECT_ID }}
-        REGION: ${{ env.REGION }}
-        ARTIFACT_REGISTRY: ${{ env.ARTIFACT_REGISTRY }}
+        REGION: us-central1
+        ARTIFACT_REGISTRY: estateiq-models
         MODEL_REGISTRY_PATH: ${{ env.MODEL_PATH }}
         SERVICE_ACCOUNT: ${{ env.SA_EMAIL }}
         PORT: "8080"
@@ -69,8 +69,8 @@ jobs:
     - name: Test Deployment
       env:
         GOOGLE_CLOUD_PROJECT: ${{ env.PROJECT_ID }}
-        REGION: ${{ env.REGION }}
-        ARTIFACT_REGISTRY: ${{ env.ARTIFACT_REGISTRY }}
+        REGION: us-central1
+        ARTIFACT_REGISTRY: estateiq-models
         MODEL_REGISTRY_PATH: ${{ env.MODEL_PATH }}
         PORT: "8080"
       run: |
