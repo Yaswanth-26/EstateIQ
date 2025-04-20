@@ -9,11 +9,11 @@ on:
   workflow_dispatch:
 
 env:
-  PROJECT_ID: estateiqclone
+  PROJECT_ID: estateiq-451700
   REGION: us-central1
   ARTIFACT_REGISTRY: estateiq-models
   MODEL_PATH: models/estate_price_prediction
-  SA_EMAIL: self-522@estateiqclone.iam.gserviceaccount.com
+  SA_EMAIL: estateiq@estateiq-451700.iam.gserviceaccount.com
   GMAIL_USER: ${{ secrets.GMAIL_USER }}
   GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
   NOTIFICATION_EMAIL: ${{ secrets.NOTIFICATION_EMAIL }}
