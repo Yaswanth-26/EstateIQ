@@ -11,7 +11,7 @@ on:
 env:
   PROJECT_ID: estateiq-451700
   REGION: us-central1
-  ARTIFACT_REGISTRY: estateiq-models
+  ARTIFACT_REGISTRY: estateiq-451700-models
   MODEL_PATH: models/estate_price_prediction
   SA_EMAIL: estateiq@estateiq-451700.iam.gserviceaccount.com
   GMAIL_USER: ${{ secrets.GMAIL_USER }}
