@@ -10,7 +10,7 @@ on:
 env:
   PROJECT_ID: estateiq-451700
   REGION: us-central1
-  ARTIFACT_REGISTRY: estateiq-models
+  ARTIFACT_REGISTRY: estateiq-451700-models
   MODEL_PATH: models/estate_price_prediction
   SA_EMAIL: estateiq@estateiq-451700.iam.gserviceaccount.com
   SERVICE_NAME: estateiq-prediction
@@ -49,7 +49,7 @@ jobs:
       env:
         GOOGLE_CLOUD_PROJECT: ${{ env.PROJECT_ID }}
         REGION: us-central1
-        ARTIFACT_REGISTRY: estateiq-models
+        ARTIFACT_REGISTRY: estateiq-451700-models
         MODEL_REGISTRY_PATH: ${{ env.MODEL_PATH }}
         SERVICE_ACCOUNT: ${{ env.SA_EMAIL }}
         PORT: "8080"
@@ -70,7 +70,7 @@ jobs:
       env:
         GOOGLE_CLOUD_PROJECT: ${{ env.PROJECT_ID }}
         REGION: us-central1
-        ARTIFACT_REGISTRY: estateiq-models
+        ARTIFACT_REGISTRY: estateiq-451700-models
         MODEL_REGISTRY_PATH: ${{ env.MODEL_PATH }}
         PORT: "8080"
       run: |
